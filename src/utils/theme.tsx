@@ -32,12 +32,18 @@ const themeOptions = {
         info: {
             main: "#383B42",
         },
-        // divider: "#343232",
-        // text: {
-        //     primary: "#FFFFFF",
-        //     disabled: "rgba(107,107,107,0.38)",
-        //     secondary: "#343232",
-        // },
+        divider: "#343232",
+
+        text: {
+            primary: "#FFFFFF",
+            disabled: "rgba(107,107,107,0.38)",
+            secondary: "#FFFFFF",
+        },
+
+        background: {
+            paper: "#000000",
+            default: "#000000",
+        },
     },
     shape: {
         borderRadius: 0,
@@ -49,12 +55,15 @@ const themeOptions = {
         },
         h5: {
             fontFamily: MontserratSemiBold.style.fontFamily,
+            fontSize: "14px",
         },
         h3: {
             fontFamily: LibreBaskerville.style.fontFamily,
         },
         h1: {
             fontFamily: LeagueSpartan.style.fontFamily,
+            lineHeight: "70px",
+            fontSize: "94px",
         },
         body1: {
             fontFamily: Archivo.style.fontFamily,
@@ -63,6 +72,18 @@ const themeOptions = {
 
     components: {
         MuiButton: {
+            styleOverrides: {
+                root: {
+                    color: "#FFFFFF",
+                    fontFamily: MontserratRegular.style.fontFamily,
+                    fontSize: "12px",
+                    lineHeight: "18px",
+                    letterSpacing: "0.2em",
+                },
+            },
+        },
+
+        MuiTab: {
             styleOverrides: {
                 root: {
                     color: "#FFFFFF",

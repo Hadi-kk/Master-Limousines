@@ -1,16 +1,7 @@
 "use client";
 import { useState } from "react";
-import {
-    AppBar,
-    Box,
-    Button,
-    Grid,
-    Link,
-    List,
-    ListItem,
-    Tab,
-    Tabs,
-} from "@mui/material";
+import { AppBar, Button, Grid, Tab, Tabs } from "@mui/material";
+import Link from "next/link";
 import logo from "@/assets/svgs/Logo.svg";
 import Image from "next/image";
 
@@ -36,30 +27,58 @@ const Navbar = () => {
                     <Tabs
                         value={value}
                         onChange={handleChange}
-                        indicatorColor="primary"
+                        indicatorColor="secondary"
+                        // textColor="inherit"
                         aria-label="Navigation tabs"
                     >
-                        <Link href="/">
-                            <Tab value="HOME" label="HOME" />
-                        </Link>
+                        <Tab
+                            value="HOME"
+                            label="HOME"
+                            href="/"
+                            LinkComponent={Link}
+                        />
 
-                        <Link href="/services">
-                            <Tab value="SERVICES" label="SERVICES" />
-                        </Link>
+                        <Tab
+                            value="SERVICES"
+                            label="SERVICES"
+                            href="/services"
+                            LinkComponent={Link}
+                        />
 
-                        <Link href="/events">
-                            <Tab value="EVENTS" label="EVENTS" />
-                        </Link>
+                        <Tab
+                            value="EVENTS"
+                            label="EVENTS"
+                            href="/events"
+                            LinkComponent={Link}
+                        />
 
-                        <Link href="/fleet">
-                            <Tab value="OUR FLEET" label="OUR FLEET" />
-                        </Link>
+                        <Tab
+                            value="OUR FLEET"
+                            label="OUR FLEET"
+                            href="/fleet"
+                            LinkComponent={Link}
+                        />
 
-                        <Link href="/about">
-                            <Tab value="ABOUT US" label="ABOUT US" />
-                        </Link>
+                        <Tab
+                            value="ABOUT US"
+                            label="ABOUT US"
+                            href="/about"
+                            LinkComponent={Link}
+                        />
 
-                        <Button variant="contained" color="primary">
+                        <Tab
+                            value="CONTACT US"
+                            label="CONTACT US"
+                            href="/contact"
+                            LinkComponent={Link}
+                        />
+
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            href="/reservations"
+                            LinkComponent={Link}
+                        >
                             RESERVATIONS
                         </Button>
                     </Tabs>
