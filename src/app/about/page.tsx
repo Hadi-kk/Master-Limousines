@@ -2,6 +2,65 @@
 import { InfoTile } from "@/components";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 
+const customers = [
+    "Evofem Biosciences",
+    "General Atomics",
+    "Cadence Travel",
+    "One Call Medical",
+    "Cohn Restaurant Group",
+    "Diageo Beer Company",
+    "ETA Executive Services",
+    "Allied Crew Transportation",
+    "Southern Wine & Spirits",
+    "Showtime University of California San Diego",
+    "Texas Roadhouse",
+    "Awaken Church",
+    "Toyota",
+    "DJO Global",
+    "Stryker",
+    "Jacobs Investment Company LLC",
+    "Crest Beverage",
+    "Bo-Beau Kitchen & Bar",
+    "Corvette Diner Blarney Stone Pub",
+    "Courtesy Chevrolet",
+    "John Boggs & Associates",
+    "San Diego State University",
+    "Sycuan Casino",
+    "Russell Westbrook Enterprises",
+    "Eddie V's",
+    "Chick-Fil-A",
+    "Ronald McDonald House",
+    "Lexus Qualtech",
+    "Frosch",
+    "Discount Tire",
+    "Procopio Cory Hargreaves & Savitch LLP",
+    "Travelworld International Group",
+    "Billy Gene Marketing INC",
+    "Higgs Fletcher and Mack",
+    "Digitech",
+    "iHeart Radio",
+    "Make a Wish Foundation Qualtech",
+    "Frosch",
+    "Discount Tire",
+    "Procopio Cory Hargreaves & Savitch LLP",
+    "Travelworld International Group",
+    "Billy Gene Marketing INC",
+    "Higgs Fletcher and Mack",
+    "Digitech",
+    "iHeart Radio",
+    "Make a Wish Foundation",
+    "Pacific Wine & Spirits",
+    "Jeld-Wen Inc.",
+    "San Diego Humane Society",
+    "BioAtla",
+    "Jägermeister",
+    "ForeViva Medical Clinique",
+    "Carey Meetings & Events",
+    "Regal Entertainment Group",
+    "Mercedes Benz",
+    "Callaway Golf Odyssey",
+];
+
 const about = () => {
     const heroStyle = {
         backgroundImage: `url('/aboutbg.svg')`,
@@ -196,6 +255,53 @@ const about = () => {
                     </Button>
                 </Stack>
             </Box>
+
+            <Grid
+                container
+                sx={{
+                    backgroundImage: `url('/customersbg.svg')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    height: "100vh",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    color: "white",
+                    textShadow: "0px 4px 4px 0px #00000040",
+                }}
+            >
+                <Grid item>
+                    <Typography variant="h3">
+                        Our prized customer base
+                    </Typography>
+                </Grid>
+                <Grid item>
+                    <Box
+                        display="flex"
+                        flexWrap="wrap"
+                        justifyContent="space-between"
+                        px={5}
+                    >
+                        {customers.map((customer, index) => {
+                            return (
+                                <Typography
+                                    variant="h5"
+                                    fontSize="13px"
+                                    letterSpacing="2.4px"
+                                    key={index}
+                                    width="15%"
+                                    px="8px"
+                                    marginBottom="16px"
+                                    textAlign="center"
+                                >
+                                    {customer}
+                                </Typography>
+                            );
+                        })}
+                    </Box>
+                </Grid>
+            </Grid>
         </>
     );
 };
