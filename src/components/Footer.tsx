@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import logo from "@/assets/svgs/Logo.svg";
 import Image from "next/image";
-import { BiLogoFacebook, BiLogoTwitter } from "react-icons/Bi";
+import { BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { TiSocialInstagram } from "react-icons/ti";
 import { TfiPinterestAlt } from "react-icons/tfi";
 import { BsDot } from "react-icons/bs";
@@ -67,18 +67,24 @@ const GetList = (props: ListProps) => {
 
     return (
         <List>
-            {options.map((option, index) => (
-                <ListItem key={index} disablePadding>
-                    <ListItemIcon>
-                        <BsDot color="#fff" />
-                    </ListItemIcon>
-                    <ListItemText>
-                        <Typography variant="body1" fontSize="13px">
-                            {option.title}
-                        </Typography>
-                    </ListItemText>
-                </ListItem>
-            ))}
+            <Stack spacing={-1}>
+                {" "}
+                {/* Adjust the spacing value as needed */}
+                {options.map((option, index) => (
+                    <ListItem key={index} disablePadding>
+                        <ListItemIcon
+                            sx={{ "&.MuiListItemIcon-root": { minWidth: 0 } }}
+                        >
+                            <BsDot color="#fff" />
+                        </ListItemIcon>
+                        <ListItemText>
+                            <Typography variant="body1" fontSize="14px">
+                                {option.title}
+                            </Typography>
+                        </ListItemText>
+                    </ListItem>
+                ))}
+            </Stack>
         </List>
     );
 };
@@ -89,11 +95,19 @@ const Footer = () => {
             <Grid
                 container
                 justifyContent="space-between"
-                sx={{ backgroundColor: "rgba(56, 59, 66, 0.4)", p: 5 }}
+                sx={{
+                    backgroundColor: "rgba(56, 59, 66, 0.4)",
+                    p: 4,
+                    color: "rgba(255, 255, 255, 0.75)",
+                }}
             >
                 <Grid item xs={12} sm={6} md={2}>
-                    <Stack spacing={2}>
-                        <Typography variant="h5" textAlign="center">
+                    <Stack spacing={4}>
+                        <Typography
+                            variant="h5"
+                            textAlign="center"
+                            color="#fff"
+                        >
                             ABOUT US
                         </Typography>
                         <Typography variant="h3" fontSize="13px">
@@ -105,17 +119,22 @@ const Footer = () => {
                             transportation throughout San Diego county for over
                             22 years.
                         </Typography>
-                        <Toolbar />
-                        <Typography variant="body1" fontSize="13px">
-                            License: TCP15412-A
-                        </Typography>
+                        <div style={{ marginTop: "100%" }}>
+                            <Typography variant="body1" fontSize="13px">
+                                License: TCP15412-A
+                            </Typography>
+                        </div>
                     </Stack>
                 </Grid>
 
                 <Grid item xs={12} sm={6} md={2}>
                     <Stack spacing={2}>
-                        <Typography variant="h5" textAlign="center">
-                            Services
+                        <Typography
+                            variant="h5"
+                            textAlign="center"
+                            color="#fff"
+                        >
+                            SERVICES
                         </Typography>
                         <GetList options={services} />
                     </Stack>
@@ -123,7 +142,11 @@ const Footer = () => {
 
                 <Grid item xs={12} sm={6} md={2}>
                     <Stack spacing={2}>
-                        <Typography variant="h5" textAlign="center">
+                        <Typography
+                            variant="h5"
+                            textAlign="center"
+                            color="#fff"
+                        >
                             THE FLEET
                         </Typography>
                         <GetList options={fleet} />
@@ -132,7 +155,11 @@ const Footer = () => {
 
                 <Grid item xs={12} sm={6} md={2}>
                     <Stack spacing={2}>
-                        <Typography variant="h5" textAlign="center">
+                        <Typography
+                            variant="h5"
+                            textAlign="center"
+                            color="#fff"
+                        >
                             NAVIGATE
                         </Typography>
                         <GetList options={navItems} />
@@ -141,7 +168,11 @@ const Footer = () => {
 
                 <Grid item xs={12} sm={6} md={2}>
                     <Stack spacing={2}>
-                        <Typography variant="h5" textAlign="center">
+                        <Typography
+                            variant="h5"
+                            textAlign="center"
+                            color="#fff"
+                        >
                             CONTACT
                         </Typography>
                         <Typography variant="body1">
