@@ -130,7 +130,7 @@ const events = () => {
                 >
                     {eventsList.map((eventItem, index) => {
                         return (
-                            <Grid item>
+                            <Grid item key={index}>
                                 <EventCard
                                     picture={eventItem.picture}
                                     title={eventItem.title}
