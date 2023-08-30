@@ -96,7 +96,11 @@ const events = () => {
                             </Typography>
                             {eventsList.map((eventItem, index) => {
                                 return (
-                                    <Stack direction="row" spacing={5}>
+                                    <Stack
+                                        direction="row"
+                                        spacing={5}
+                                        key={index}
+                                    >
                                         <Typography
                                             variant="h1"
                                             fontSize="64px"
