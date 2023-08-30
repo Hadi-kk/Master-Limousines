@@ -10,6 +10,7 @@ import NewsSection from "./UI/Landing/NewsSection";
 import Section8 from "./UI/Landing/Section8";
 import Section9 from "./UI/Landing/Section9";
 import InfoTile from "./InfoTile";
+import EventCard from "./EventCard";
 
 
 
@@ -23,5 +24,9 @@ export{
     CustomerSection,
     ServicesSection,
     Section8,
+    NewsSection,
+    Section9,
     InfoTile,
+    EventCard,
+
 }
