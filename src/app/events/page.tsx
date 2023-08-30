@@ -99,7 +99,7 @@ const events = () => {
                                     <Stack
                                         direction="row"
                                         spacing={5}
-                                        key={index}
+                                        key={index * 100}
                                     >
                                         <Typography
                                             variant="h1"
