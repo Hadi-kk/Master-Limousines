@@ -70,7 +70,6 @@ interface serviceDetailProps {
 
 const ServiceDetailPage = (props: serviceDetailProps) => {
     const { index, title, description, picture, icon } = props;
-    console.log("here is index", index);
 
     if (index % 2 === 0) {
         return (
