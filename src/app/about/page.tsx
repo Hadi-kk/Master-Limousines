@@ -70,7 +70,7 @@ const customers = [
     "Callaway Golf Odyssey",
 ];
 
-const about = () => {
+const About = () => {
     const heroStyle = {
         backgroundImage: `url('/aboutbg.svg')`,
         backgroundSize: "cover",
@@ -437,4 +437,4 @@ const about = () => {
     );
 };
 
-export default about;
+export default About;
