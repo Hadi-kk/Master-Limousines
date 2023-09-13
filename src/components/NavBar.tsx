@@ -73,13 +73,6 @@ const Navbar = () => {
                             LinkComponent={Link}
                         />
 
-                        <Tab
-                            value="/contact"
-                            label="CONTACT US"
-                            href="/contact"
-                            LinkComponent={Link}
-                        />
-
                         <Button
                             value="/reservations"
                             variant="contained"
