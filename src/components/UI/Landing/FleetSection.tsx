@@ -1,7 +1,8 @@
-"use Client";
+"use client";
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import banner1 from "@/assets/svgs/banner1.svg";
+import { BsChevronRight } from "react-icons/bs";
 
 const FleetSection = () => {
     const heroStyle = {
@@ -47,7 +48,7 @@ const FleetSection = () => {
                 accordian
             </Box>
             <Box textAlign="right" px={5} sx={{ height: "10vh" }}>
-                <Button>VIEW ENTIRE FLEET</Button>
+                <Button endIcon={<BsChevronRight />}>VIEW ENTIRE FLEET</Button>
             </Box>
         </>
     );

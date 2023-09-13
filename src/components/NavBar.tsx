@@ -1,16 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AppBar, Button, Grid, Tab, Tabs } from "@mui/material";
 import Link from "next/link";
 import logo from "@/assets/svgs/Logo.svg";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-    const [value, setValue] = useState("HOME");
+    const [value, setValue] = useState("");
+    const pathname = usePathname();
 
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
     };
+
+    useEffect(() => {
+        console.log("here is path", pathname);
+        setValue(pathname);
+    }, [pathname]);
 
     return (
         <AppBar color="transparent" sx={{ p: 4, boxShadow: "none" }}>
@@ -28,52 +35,53 @@ const Navbar = () => {
                         value={value}
                         onChange={handleChange}
                         indicatorColor="secondary"
-                        // textColor="inherit"
+                        textColor="inherit"
                         aria-label="Navigation tabs"
                     >
                         <Tab
-                            value="HOME"
+                            value="/"
                             label="HOME"
                             href="/"
                             LinkComponent={Link}
                         />
 
                         <Tab
-                            value="SERVICES"
+                            value="/services"
                             label="SERVICES"
                             href="/services"
                             LinkComponent={Link}
                         />
 
                         <Tab
-                            value="EVENTS"
+                            value="/events"
                             label="EVENTS"
                             href="/events"
                             LinkComponent={Link}
                         />
 
                         <Tab
-                            value="OUR FLEET"
+                            value="/fleet"
                             label="OUR FLEET"
                             href="/fleet"
                             LinkComponent={Link}
                         />
 
                         <Tab
-                            value="ABOUT US"
+                            value="/about"
                             label="ABOUT US"
                             href="/about"
                             LinkComponent={Link}
                         />
 
                         <Tab
-                            value="CONTACT US"
+                            value="/contact"
                             label="CONTACT US"
                             href="/contact"
                             LinkComponent={Link}
                         />
 
                         <Button
+                            value="/reservations"
                             variant="contained"
                             color="primary"
                             href="/reservations"

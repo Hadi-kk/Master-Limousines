@@ -1,6 +1,15 @@
-"use Client";
+"use client";
 import { InfoTile } from "@/components";
-import { Box, Button, Grid, Stack, Typography } from "@mui/material";
+import { useRef } from "react";
+import {
+    Box,
+    Button,
+    Grid,
+    IconButton,
+    Stack,
+    Typography,
+} from "@mui/material";
+import { SlArrowDown } from "react-icons/sl";
 
 const customers = [
     "Evofem Biosciences",
@@ -75,7 +84,10 @@ const about = () => {
     };
 
     const blankbox = {
-        height: "100vh",
+        backgroundImage: `url('/chauffeur.png')`,
+        backgroundSize: "contain",
+        backgroundPosition: "left bottom",
+        backgroundRepeat: "no-repeat",
         display: "flex",
         justifyContent: "center",
         alignItems: "start",
@@ -86,7 +98,8 @@ const about = () => {
     const smallBox = {
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "27vh",
+        height: "30vh",
+        width: "100%",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -95,27 +108,56 @@ const about = () => {
         boxShadow: "inset 0em 6em 12em 0em rgb(0, 0, 0)",
     };
 
+    const scrollRef = useRef<HTMLDivElement | null>(null);
+
+    const handleScrollTo = () => {
+        // Scroll to the "QUALIFIED CHAUFFEURS" section
+        scrollRef.current?.scrollIntoView({
+            behavior: "smooth", // You can use "auto" for instant scrolling
+        });
+    };
+
     return (
         <>
-            <Box style={heroStyle} textAlign="center" px={5}>
-                <Stack
-                    maxWidth={500}
-                    height="80vh"
-                    spacing={5}
-                    py={15}
-                    px={5}
-                    sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+            <Grid container style={heroStyle}>
+                <Grid
+                    item
+                    container
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    textAlign="center"
+                    rowGap={6}
+                    sx={{
+                        maxWidth: "35vw",
+                        height: "80vh",
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                        backdropFilter: "blur(2px)",
+                    }}
                 >
-                    <Typography variant="h1">WHY US?</Typography>
-                    <Typography variant="body1">
-                        At Masterpiece Limousine, we understand that when it
-                        comes to transportation, our clients expect nothing but
-                        the best. That's why we're dedicated to providing the
-                        highest quality services that prioritize great customer
-                        service, reliability, and safety.
-                    </Typography>
-                </Stack>
-            </Box>
+                    <Grid item>
+                        <Typography variant="h1">WHY US?</Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography
+                            variant="body1"
+                            sx={{ maxWidth: "24vw", lineHeight: "normal" }}
+                        >
+                            At Masterpiece Limousine, we understand that when it
+                            comes to transportation, our clients expect nothing
+                            but the best. That's why we're dedicated to
+                            providing the highest quality services that
+                            prioritize great customer service, reliability, and
+                            safety.
+                        </Typography>
+                    </Grid>
+                    <Grid item mt={2}>
+                        <IconButton onClick={handleScrollTo}>
+                            <SlArrowDown color="#fff" />
+                        </IconButton>
+                    </Grid>
+                </Grid>
+            </Grid>
 
             <Grid container style={blankbox}>
                 <Grid
@@ -125,7 +167,7 @@ const about = () => {
                     style={{
                         display: "flex",
                         flexDirection: "column",
-                        rowGap: 35,
+                        rowGap: 10,
                         alignItems: "center",
                     }}
                 >
@@ -140,7 +182,11 @@ const about = () => {
                             style={smallBox}
                             sx={{ backgroundImage: `url('/about1.svg')` }}
                         >
-                            <Typography variant="body1" textAlign="center">
+                            <Typography
+                                variant="body1"
+                                textAlign="center"
+                                sx={{ maxWidth: "550px" }}
+                            >
                                 Our extensive range of luxury vehicles,
                                 including traditional limousines and spacious
                                 SUV limos, can accommodate groups of any size.
@@ -154,7 +200,11 @@ const about = () => {
                             style={smallBox}
                             sx={{ backgroundImage: `url('/about2.svg')` }}
                         >
-                            <Typography variant="body1" textAlign="center">
+                            <Typography
+                                variant="body1"
+                                textAlign="center"
+                                sx={{ maxWidth: "550px" }}
+                            >
                                 We take pride in our commitment to customer
                                 satisfaction, trust, and reliability. Our
                                 professionally trained drivers are always ready
@@ -168,7 +218,11 @@ const about = () => {
                             style={smallBox}
                             sx={{ backgroundImage: `url('/about3.svg')` }}
                         >
-                            <Typography variant="body1" textAlign="center">
+                            <Typography
+                                variant="body1"
+                                textAlign="center"
+                                sx={{ maxWidth: "550px" }}
+                            >
                                 At Masterpiece Limousine, we offer various
                                 transportation services, including Temecula wine
                                 tours, anniversary celebrations, bachelor and
@@ -187,13 +241,89 @@ const about = () => {
                         </Typography>
                     </Stack>
                 </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    sx={{
+                        justifyContent: "right !important",
+                        textAlign: "right ",
+                    }}
+                    px={5}
+                    ref={scrollRef}
+                >
+                    <Stack
+                        py={8}
+                        spacing={2}
+                        maxWidth={1000}
+                        sx={{ marginLeft: "auto" }}
+                    >
+                        <Typography variant="h1" maxWidth={1000} pl={20}>
+                            QUALIFIED CHAUFFEURS
+                        </Typography>
+                        <Typography variant="body1">
+                            At Masterpiece Limousine we understand that
+                            transportation is more than just getting from one
+                            place to another, and we strive to provide our
+                            customers with the highest level of service
+                            possible. That's why we carefully select and train
+                            our chauffeurs to deliver excellent customer
+                            service, reliability, safety, and comfort.
+                        </Typography>
+                        <Typography variant="body1">
+                            Our chauffeurs undergo thorough background checks
+                            and rigorous training to meet our strict standards.
+                            They are knowledgeable about the San Diego area and
+                            committed to providing a smooth and enjoyable ride.
+                            Whether you're traveling to or from the airport,
+                            celebrating a special occasion, or going on a group
+                            excursion, our chauffeurs are dedicated to making
+                            your transportation experience positive.
+                        </Typography>
+                        <Typography variant="body1">
+                            At Masterpiece Limousine, customer satisfaction and
+                            safety are our top priorities. We go above and
+                            beyond to ensure you have a pleasant and stress-free
+                            experience while in our care. Our fleet of luxury
+                            vehicles is well-maintained and equipped with the
+                            latest technology to ensure your safety and comfort.
+                        </Typography>
+                        <Typography variant="body1">
+                            Experience the difference with Masterpiece
+                            Limousine, where luxury meets unparalleled service.
+                        </Typography>
+
+                        <Typography
+                            variant="h3"
+                            fontSize="32px"
+                            textAlign="center"
+                            pt={5}
+                            width={700}
+                        >
+                            Contact us today to book your transportation needs
+                            and indulge in the ultimate luxury transportation
+                            experience.
+                        </Typography>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                width: "200px",
+                                height: "50px",
+                                // alignSelf: "center",
+                                marginLeft: "240px !important",
+                            }}
+                        >
+                            RESERVE NOW
+                        </Button>
+                    </Stack>
+                </Grid>
             </Grid>
 
-            <Box
+            {/* <Box
                 style={blankbox}
                 sx={{ justifyContent: "right !important" }}
                 textAlign="right"
                 px={5}
+                ref={scrollRef}
             >
                 <Stack maxWidth={1000} spacing={2}>
                     <Typography variant="h1" maxWidth={1000} pl={20}>
@@ -254,7 +384,7 @@ const about = () => {
                         RESERVE NOW
                     </Button>
                 </Stack>
-            </Box>
+            </Box> */}
 
             <Grid
                 container
@@ -262,13 +392,14 @@ const about = () => {
                     backgroundImage: `url('/customersbg.svg')`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "100vh",
+                    height: "110vh",
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "center",
                     alignItems: "center",
                     color: "white",
                     textShadow: "0px 4px 4px 0px #00000040",
+                    boxShadow: "inset 0em 6em 12em 0em rgb(0, 0, 0)",
                 }}
             >
                 <Grid item>

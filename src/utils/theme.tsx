@@ -11,7 +11,7 @@ const LeagueSpartan = localFont({
     src: "../assets/fonts/LeagueSpartan-Bold.ttf",
 });
 const Archivo = localFont({
-    src: "../assets/fonts/Archivo-Regular.ttf",
+    src: "../assets/fonts/Archivo-Light.ttf",
 });
 const LibreBaskerville = localFont({
     src: "../assets/fonts/LibreBaskerville-Italic.ttf",

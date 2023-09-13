@@ -15,7 +15,7 @@ const InfoTile = (props: {
             alignItems="center"
             py={4}
             width={200}
-            height={variant === "long" ? 240 : 150}
+            height={variant === "long" ? 240 : 200}
             sx={{ backgroundColor: "black" }}
         >
             <Typography variant="h1" fontSize="46px" textAlign="center" py={3}>
@@ -24,6 +24,7 @@ const InfoTile = (props: {
             <Typography
                 variant="h4"
                 fontSize="12px"
+                letterSpacing="1.5px"
                 textAlign="center"
                 width="80px"
             >

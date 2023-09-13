@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import { Box, Stack, Typography } from "@mui/material";
 
 const Section9 = () => {
