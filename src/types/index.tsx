@@ -12,4 +12,5 @@ export interface EventCardProps {
     title: string;
     description: string;
     stamp: string;
+    type: "condensed" | "spaced";
 }

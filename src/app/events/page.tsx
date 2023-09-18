@@ -140,6 +140,7 @@ const events = () => {
                                     title={eventItem.title}
                                     description={eventItem.desription}
                                     stamp={eventItem.stamp}
+                                    type="spaced"
                                 />
                             </Grid>
                         );

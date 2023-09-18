@@ -7,18 +7,18 @@ import { CardActionArea, Stack } from "@mui/material";
 import { EventCardProps } from "@/types";
 
 export default function EventCard(props: EventCardProps) {
-    const { picture, title, description, stamp } = props;
+    const { picture, title, description, stamp, type } = props;
     return (
-        <Card sx={{ maxWidth: 365 }}>
+        <Card sx={{ maxWidth: type === "condensed" ? 330 : 365 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="270"
+                    height={type === "condensed" ? "230" : "270"}
                     image={picture}
                     alt="green iguana"
                 />
                 <CardContent sx={{ borderLeft: "1px solid red" }}>
-                    <Stack spacing={4}>
+                    <Stack spacing={type === "condensed" ? 0.5 : 4}>
                         <Typography
                             gutterBottom
                             variant="h5"
