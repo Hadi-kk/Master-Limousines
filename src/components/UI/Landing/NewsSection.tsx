@@ -97,7 +97,7 @@ const NewsSection = () => {
                     draggable={true}
                     showDots={false}
                     responsive={responsive}
-                    ssr={false}
+                    ssr={true}
                     infinite={true}
                     arrows={false}
                     renderButtonGroupOutside={true}
