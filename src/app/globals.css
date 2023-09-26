@@ -1,8 +1,5 @@
 
 
-
-
-
 * {
   /* font-family: 'LibreBaskerville'; */
   box-sizing: border-box;
@@ -32,6 +29,17 @@ body {
   
 }
 
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
 
+/* Hide scrollbar track */
+::-webkit-scrollbar-track {
+  display: none;
+}
 
+/* Style scrollbar thumb (indicator) */
+::-webkit-scrollbar-thumb {
+  background-color: #2189B7; 
+}
 

@@ -94,6 +94,13 @@ const themeOptions = {
                 },
             },
         },
+        MuiSvgIcon: {
+            styleOverrides: {
+                root: {
+                    color: "#FFFFFF",
+                },
+            },
+        },
     },
 };
 

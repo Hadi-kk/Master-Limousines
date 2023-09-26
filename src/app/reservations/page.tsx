@@ -1,37 +1,50 @@
 "use client";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import Accordian1 from "./Accordian1";
+import Accordian2 from "./Accordian2";
+import Accordian3 from "./Accordian3";
 
 const reservations = () => {
-    const heroStyle2 = {
-        backgroundImage: `url('/reservationbg.svg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "280vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "end",
-        color: "white",
-        textShadow: "0px 4px 4px 0px #00000040",
-    };
     return (
-        <>
-            <Box style={heroStyle2} textAlign="center" px={5}>
-                <Stack spacing={5} direction="row">
-                    {/* <Typography variant="h1">THE reservation</Typography>
-                    <Typography variant="body1">
-                        Experience safe and reliable Luxury Ground
-                        Transportation with our professional chauffeurs at
-                        Masterpiece Limousine. We are fully licensed and insured
-                        for your peace of mind, and our reservation of vehicles
-                        is perfect for any occasion, whether it's a corporate
-                        event or a special occasion. Let us take care of the
-                        driving while you sit back, relax, and enjoy the comfort
-                        and sophistication of our luxury ground transportation
-                        services.
-                    </Typography> */}
-                </Stack>
+        <Box
+            sx={{
+                backgroundImage: `url('/reservationbg.svg')`,
+                backgroundSize: "cover",
+                backgroundPosition: "top",
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                // justifyContent: "center",
+                alignItems: "center",
+                color: "white",
+                textShadow: "0px 4px 4px 0px #00000040",
+                paddingTop: 20,
+            }}
+        >
+            <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between "
+                width="75%"
+                mb={2}
+            >
+                <Button
+                    variant="contained"
+                    sx={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+                >
+                    NEW RESERVATION
+                </Button>
+                <Button
+                    variant="contained"
+                    sx={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+                >
+                    LOGIN
+                </Button>
             </Box>
-        </>
+            <Accordian1 />
+            <Accordian2 />
+            <Accordian3 />
+        </Box>
     );
 };
 
