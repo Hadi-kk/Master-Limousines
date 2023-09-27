@@ -1,20 +1,19 @@
 "use client";
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import banner1 from "@/assets/svgs/banner1.svg";
+import { Box, Button, Stack, Typography } from "@mui/material";
+
+const heroStyle2 = {
+    backgroundImage: `url('/CadillacLower.svg')`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "left",
+    alignItems: "center",
+    color: "white",
+    textShadow: "0px 4px 4px 0px #00000040",
+};
 
 const Section3 = () => {
-    const heroStyle2 = {
-        backgroundImage: `url('/CadillacLower.svg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "left",
-        alignItems: "center",
-        color: "white",
-        textShadow: "0px 4px 4px 0px #00000040",
-    };
     return (
         <>
             <Box style={heroStyle2} textAlign="left" px={5}>

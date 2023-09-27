@@ -11,6 +11,7 @@ import Section8 from "./UI/Landing/Section8";
 import Section9 from "./UI/Landing/Section9";
 import InfoTile from "./InfoTile";
 import EventCard from "./EventCard";
+import Bar from "./Bar";
 
 
 
@@ -28,5 +29,6 @@ export{
     Section9,
     InfoTile,
     EventCard,
+    Bar,
 
 }

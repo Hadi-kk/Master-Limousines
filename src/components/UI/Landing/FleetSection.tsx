@@ -7,10 +7,9 @@ import FleetAccordian from "@/components/FleetAccordian";
 
 const FleetSection = () => {
     const heroStyle = {
-        backgroundImage: `url('/CadillacLowest.svg')`,
+        // backgroundImage: `url('/CadillacLowest.svg')`,
         // backgroundImage: `url('../assets/svgs/banner1.svg')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundColor: "#0000000",
         height: "20vh",
         display: "flex",
         justifyContent: "space-between",

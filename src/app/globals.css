@@ -43,3 +43,133 @@ body {
   background-color: #2189B7; 
 }
 
+
+.cssload-loader {
+	width: auto;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size:14px;
+	color: rgb(255, 255, 255);
+	letter-spacing: 0.2em;
+}
+.cssload-loader::before, .cssload-loader::after {
+	content: "";
+	display: block;
+	width: 9px;
+	height: 9px;
+	background: rgb(206,66,51);
+	position: absolute;
+	animation: cssload-load 1.54s infinite alternate ease-in-out;
+		-o-animation: cssload-load 1.54s infinite alternate ease-in-out;
+		-ms-animation: cssload-load 1.54s infinite alternate ease-in-out;
+		-webkit-animation: cssload-load 1.54s infinite alternate ease-in-out;
+		-moz-animation: cssload-load 1.54s infinite alternate ease-in-out;
+}
+.cssload-loader::before {
+	top: 0;
+}
+.cssload-loader::after {
+	bottom: 0;
+}
+
+
+
+@keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 17px;
+		width: 9px;
+	}
+	50% {
+		height: 5px;
+		width: 23px;
+    background: #2189B7;
+	}
+	100% {
+		left: 175px;
+		height: 17px;
+		width: 9px;
+	}
+}
+
+@-o-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 17px;
+		width: 9px;
+	}
+	50% {
+		height: 5px;
+		width: 23px;
+    background: #2189B7;
+	}
+	100% {
+		left: 175px;
+		height: 17px;
+		width: 9px;
+	}
+}
+
+@-ms-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 17px;
+		width: 9px;
+	}
+	50% {
+		height: 5px;
+		width: 23px;
+    background: #2189B7;
+	}
+	100% {
+		left: 175px;
+		height: 17px;
+		width: 9px;
+	}
+}
+
+@-webkit-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 17px;
+		width: 9px;
+	}
+	50% {
+		height: 5px;
+		width: 23px;
+    background: #2189B7;
+	}
+	100% {
+		left: 175px;
+		height: 17px;
+		width: 9px;
+	}
+}
+
+@-moz-keyframes cssload-load {
+	0% {
+		left: 0;
+		height: 17px;
+		width: 9px;
+	}
+	50% {
+		height: 5px;
+		width: 23px;
+    background: #2189B7;
+	}
+	100% {
+		left: 175px;
+		height: 17px;
+		width: 9px;
+	}
+}

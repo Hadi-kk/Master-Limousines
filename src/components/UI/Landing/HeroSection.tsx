@@ -2,6 +2,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import banner1 from "@/assets/svgs/banner1.svg";
+import { Bar } from "@/components";
 
 const HeroSection = () => {
     const heroStyle = {
@@ -19,8 +20,8 @@ const HeroSection = () => {
     };
     return (
         <>
-            <Box style={heroStyle} textAlign="right" px={5}>
-                <Stack maxWidth={500} spacing={1}>
+            <Box style={heroStyle} textAlign="right" pl={5} pr={0.5}>
+                <Stack maxWidth={500} spacing={1} pr={2}>
                     <Typography variant="h1">
                         SAN DIEGO LIMOUSINE SERVICE
                     </Typography>
@@ -36,6 +37,7 @@ const HeroSection = () => {
                         experience.
                     </Typography>
                 </Stack>
+                <Bar count={24} filled={0} />
             </Box>
         </>
     );
