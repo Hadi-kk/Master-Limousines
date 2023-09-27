@@ -16,12 +16,13 @@ const FleetSection = () => {
         alignItems: "center",
         color: "white",
         textShadow: "0px 4px 4px 0px #00000040",
+        zIndex: 100,
     };
 
     return (
         <>
-            <Box style={heroStyle} px={5}>
-                <Grid container>
+            <Box style={heroStyle} px={5} mt={-18}>
+                <Grid container sx={{ zIndex: 100 }}>
                     <Grid item xs={12} md={5}>
                         <Typography variant="h1">THE FLEET</Typography>
                     </Grid>
