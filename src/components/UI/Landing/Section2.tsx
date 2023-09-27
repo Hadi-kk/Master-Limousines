@@ -5,7 +5,7 @@ import { Bar } from "@/components";
 
 const Section2 = () => {
     const heroStyle = {
-        minHeight: "200vh",
+        minHeight: "220vh",
         display: "flex",
         justifyContent: "start",
         alignItems: "start",
@@ -56,7 +56,7 @@ const Section2 = () => {
                     display="flex"
                     justifyContent="end"
                     alignItems="end"
-                    sx={{ position: "relative", height: 430 }}
+                    sx={{ position: "relative", height: 470 }}
                 >
                     <Grid item zIndex={10}>
                         <Typography
@@ -139,21 +139,21 @@ const Section2 = () => {
                     md={11}
                     sm={12}
                 >
-                    <Grid item md={2}>
+                    <Grid item md={2.5}>
                         <InfoPicture
                             title="EXCEPTIONAL CUSTOMER SERVICE"
                             picture="./support.svg"
                             description="Masterpiece Limousine is dedicated to providing our clients with the highest level of service, ensuring a smooth and enjoyable transportation experience."
                         />
                     </Grid>
-                    <Grid item md={2}>
+                    <Grid item md={2.5}>
                         <InfoPicture
                             title="RELIABILITY"
                             picture="./headlight.svg"
                             description="We are committed to being punctual and dependable, ensuring our clients arrive at their destination on time and with minimal stress."
                         />
                     </Grid>
-                    <Grid item md={2}>
+                    <Grid item md={2.5}>
                         <InfoPicture
                             title="SAFETY"
                             picture="./airbag.svg"
