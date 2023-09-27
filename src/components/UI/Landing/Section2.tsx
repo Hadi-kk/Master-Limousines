@@ -61,8 +61,8 @@ const Section2 = () => {
                     <Grid item zIndex={10}>
                         <Typography
                             variant="body1"
-                            fontSize="14px"
-                            lineHeight="18px"
+                            fontSize="15px"
+                            lineHeight="20px"
                             sx={{ maxWidth: 300 }}
                         >
                             {description}
