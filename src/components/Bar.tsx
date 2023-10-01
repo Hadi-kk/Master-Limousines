@@ -1,12 +1,13 @@
-import { Stack } from "@mui/material";
+import { Hidden, Stack } from "@mui/material";
 import React from "react";
 
 interface BarProps {
     count: number;
     filled: 0 | number;
+    color?: string;
 }
 
-const Bar: React.FC<BarProps> = ({ count, filled }) => {
+const Bar: React.FC<BarProps> = ({ count, filled, color }) => {
     // Create an array to store the SVG elements
     const bars: JSX.Element[] = [];
 
@@ -23,8 +24,8 @@ const Bar: React.FC<BarProps> = ({ count, filled }) => {
             >
                 <path
                     d="M1.98957 33.5503L2.21656 15.8602L20.0105 2.2164L19.7835 19.9065L1.98957 33.5503Z"
-                    fill="#2189B7"
-                    stroke="#2189B7"
+                    fill={color ? color : "#2189B7"}
+                    stroke={color ? color : "#2189B7"}
                     strokeWidth="2" // Use "strokeWidth" instead of "stroke-width"
                 />
             </svg>
@@ -44,7 +45,7 @@ const Bar: React.FC<BarProps> = ({ count, filled }) => {
             >
                 <path
                     d="M1.98957 33.5503L2.21656 15.8602L20.0105 2.2164L19.7835 19.9065L1.98957 33.5503Z"
-                    stroke="#2189B7"
+                    stroke={color ? color : "#2189B7"}
                     strokeWidth="2" // Use "strokeWidth" instead of "stroke-width"
                 />
             </svg>
@@ -52,7 +53,11 @@ const Bar: React.FC<BarProps> = ({ count, filled }) => {
     }
 
     // Return the stacked SVG elements
-    return <Stack spacing={-1}>{bars}</Stack>;
+    return (
+        <Hidden mdDown>
+            <Stack spacing={-1}>{bars}</Stack>
+        </Hidden>
+    );
 };
 
 export default Bar;

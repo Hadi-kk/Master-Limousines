@@ -4,7 +4,6 @@ import { HeroSection } from "@/components";
 import dynamic from "next/dynamic";
 
 const Section2 = dynamic(() => import("../components/UI/Landing/Section2"));
-const Section3 = dynamic(() => import("../components/UI/Landing/Section3"));
 const FleetSection = dynamic(
     () => import("../components/UI/Landing/FleetSection")
 );

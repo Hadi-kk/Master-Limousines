@@ -1,5 +1,5 @@
 "use client";
-import { EventCard } from "@/components";
+import { Bar, EventCard } from "@/components";
 import { Box, Grid, IconButton, Stack, Typography } from "@mui/material";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Carousel from "react-multi-carousel";
@@ -84,47 +84,64 @@ const NewsSection = () => {
         textShadow: "0px 4px 4px 0px #00000040",
     };
     return (
-        <Grid container style={heroStyle} spacing={8} textAlign="left" p={10}>
+        <Grid
+            container
+            style={heroStyle}
+            spacing={8}
+            textAlign="left"
+            p={10}
+            pr={0.5}
+        >
             <Grid item xs={12}>
                 <Typography variant="h4" fontSize="20px" letterSpacing="8px">
                     CATCH UP ON ALL THE LATEST NEWS
                 </Typography>
             </Grid>
-
-            <Grid item xs={12} md={9.4}>
-                <Carousel
-                    swipeable={true}
-                    draggable={true}
-                    showDots={false}
-                    responsive={responsive}
-                    ssr={true}
-                    infinite={true}
-                    arrows={false}
-                    renderButtonGroupOutside={true}
-                    customButtonGroup={<CustomButtonGroupAsArrows />}
-                    // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-                    // autoPlaySpeed={1000}
-                    keyBoardControl={true}
-                    // customTransition="all .5"
-                    transitionDuration={500}
-                    // containerClass="carousel-container"
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
-                    // deviceType={"desktop"}
-                    // itemClass="carousel-item-padding-20-px"
+            <Grid item container direction="row" xs={12}>
+                <Grid item xs={12} md={9}>
+                    <Carousel
+                        swipeable={true}
+                        draggable={true}
+                        showDots={false}
+                        responsive={responsive}
+                        ssr={true}
+                        infinite={true}
+                        arrows={false}
+                        renderButtonGroupOutside={true}
+                        customButtonGroup={<CustomButtonGroupAsArrows />}
+                        // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                        // autoPlaySpeed={1000}
+                        keyBoardControl={true}
+                        // customTransition="all .5"
+                        transitionDuration={500}
+                        // containerClass="carousel-container"
+                        removeArrowOnDeviceType={["tablet", "mobile"]}
+                        // deviceType={"desktop"}
+                        // itemClass="carousel-item-padding-20-px"
+                    >
+                        {eventsList.map((eventItem, index) => {
+                            return (
+                                <EventCard
+                                    key={index}
+                                    picture={eventItem.picture}
+                                    title={eventItem.title}
+                                    description={eventItem.desription}
+                                    stamp={eventItem.stamp}
+                                    type="condensed"
+                                />
+                            );
+                        })}
+                    </Carousel>
+                </Grid>
+                <Grid
+                    item
+                    display="flex"
+                    justifyContent="flex-end"
+                    xs={0}
+                    md={3}
                 >
-                    {eventsList.map((eventItem, index) => {
-                        return (
-                            <EventCard
-                                key={index}
-                                picture={eventItem.picture}
-                                title={eventItem.title}
-                                description={eventItem.desription}
-                                stamp={eventItem.stamp}
-                                type="condensed"
-                            />
-                        );
-                    })}
-                </Carousel>
+                    <Bar count={24} filled={16} />
+                </Grid>
             </Grid>
         </Grid>
     );

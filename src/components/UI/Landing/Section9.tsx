@@ -15,6 +15,7 @@ import PersonalisedCadi from "@/assets/svgs/PersonalisedCadi.svg";
 import Image from "next/image";
 import quotation from "@/assets/svgs/quotation.svg";
 import Carousel from "react-multi-carousel";
+import { Bar } from "@/components";
 
 interface ReviewType {
     description: String;
@@ -179,7 +180,7 @@ const Section9 = () => {
         boxShadow: "inset 0em 6em 12em 0em rgb(0, 0, 0)",
     };
     return (
-        <Grid container style={heroStyle} gap={20} pb={20}>
+        <Grid container style={heroStyle} gap={20} pb={5}>
             <Grid item container p={5} gap={6}>
                 <Grid
                     item
@@ -243,89 +244,94 @@ const Section9 = () => {
                     }}
                 ></Grid>
             </Grid>
-            <Grid item container direction="row" gap={4}>
-                <Grid item md={8}>
-                    <Box
-                        sx={{
-                            background:
-                                "linear-gradient(270deg, #a72311e1 2%, rgba(33, 137, 183, 0.60) 100%)",
-                        }}
-                        display="flex"
-                        justifyContent="space-between"
-                        alignItems="center"
-                        height={300}
-                        pr={10}
-                        py={5}
-                    >
-                        <Image
-                            src={PersonalisedCadi}
-                            alt="Personalised Caddilac"
-                            height={480}
-                        />
-                        <Stack maxWidth={270} textAlign="right" spacing={4}>
-                            <Typography variant="h3">
-                                Require a personalized package?
+            <Grid item container>
+                <Grid item container direction="row" gap={4} md={11.8}>
+                    <Grid item md={8}>
+                        <Box
+                            sx={{
+                                background:
+                                    "linear-gradient(270deg, #a72311e1 2%, rgba(33, 137, 183, 0.60) 100%)",
+                            }}
+                            display="flex"
+                            justifyContent="space-between"
+                            alignItems="center"
+                            height={300}
+                            pr={10}
+                            py={5}
+                        >
+                            <Image
+                                src={PersonalisedCadi}
+                                alt="Personalised Caddilac"
+                                height={480}
+                            />
+                            <Stack maxWidth={270} textAlign="right" spacing={4}>
+                                <Typography variant="h3">
+                                    Require a personalized package?
+                                </Typography>
+                                <Typography variant="body1">
+                                    Get in touch about your queries and we will
+                                    get back to you as soon as possible.
+                                </Typography>
+                            </Stack>
+                        </Box>
+                    </Grid>
+                    <Grid item md={3}>
+                        <Stack
+                            direction="row"
+                            spacing={1}
+                            alignItems="center"
+                            pb={1}
+                        >
+                            <Typography
+                                variant="h4"
+                                fontSize="12px"
+                                letterSpacing="2px"
+                            >
+                                NAME:
                             </Typography>
-                            <Typography variant="body1">
-                                Get in touch about your queries and we will get
-                                back to you as soon as possible.
-                            </Typography>
+                            <CustomTextField hiddenLabel variant="standard" />
                         </Stack>
-                    </Box>
+                        <Stack
+                            direction="row"
+                            spacing={1}
+                            alignItems="center"
+                            pb={2}
+                        >
+                            <Typography
+                                variant="h4"
+                                fontSize="12px"
+                                letterSpacing="2px"
+                            >
+                                EMAIL:
+                            </Typography>
+                            <CustomTextField hiddenLabel variant="standard" />
+                        </Stack>
+                        <Stack direction="row" spacing={1} pb={3}>
+                            <Typography
+                                variant="h4"
+                                fontSize="12px"
+                                letterSpacing="2px"
+                            >
+                                MESSAGE:
+                            </Typography>
+                            <CustomTextField
+                                hiddenLabel
+                                variant="standard"
+                                multiline
+                                rows={3}
+                            />
+                        </Stack>
+                        <Button
+                            color="secondary"
+                            variant="contained"
+                            sx={{ width: 300 }}
+                        >
+                            SUBMIT
+                        </Button>
+                    </Grid>
                 </Grid>
-                <Grid item md={3}>
-                    <Stack
-                        direction="row"
-                        spacing={1}
-                        alignItems="center"
-                        pb={1}
-                    >
-                        <Typography
-                            variant="h4"
-                            fontSize="12px"
-                            letterSpacing="2px"
-                        >
-                            NAME:
-                        </Typography>
-                        <CustomTextField hiddenLabel variant="standard" />
-                    </Stack>
-                    <Stack
-                        direction="row"
-                        spacing={1}
-                        alignItems="center"
-                        pb={2}
-                    >
-                        <Typography
-                            variant="h4"
-                            fontSize="12px"
-                            letterSpacing="2px"
-                        >
-                            EMAIL:
-                        </Typography>
-                        <CustomTextField hiddenLabel variant="standard" />
-                    </Stack>
-                    <Stack direction="row" spacing={1} pb={3}>
-                        <Typography
-                            variant="h4"
-                            fontSize="12px"
-                            letterSpacing="2px"
-                        >
-                            MESSAGE:
-                        </Typography>
-                        <CustomTextField
-                            hiddenLabel
-                            variant="standard"
-                            multiline
-                            rows={3}
-                        />
-                    </Stack>
-                    <Button
-                        color="secondary"
-                        variant="contained"
-                        sx={{ width: 300 }}
-                    >
-                        SUBMIT
-                    </Button>
+                <Grid item md={0.16}>
+                    <Bar count={24} filled={24} />
                 </Grid>
             </Grid>
         </Grid>

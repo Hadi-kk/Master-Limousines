@@ -1,4 +1,5 @@
 "use client";
+import { Bar } from "@/components";
 import { Box, Button, Card, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { BsChevronRight } from "react-icons/bs";
@@ -73,6 +74,7 @@ const ServiceTile = (props: serviceTileProps) => {
                 padding: 2,
                 marginBottom: 2,
             }}
+            className="service-card"
         >
             <Stack alignItems={"center"} spacing={2}>
                 <Typography variant="h5">{title}</Typography>
@@ -95,7 +97,7 @@ const ServicesSection = () => {
         backgroundImage: `url('/servicesSectionBG.svg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "100vh",
+        minHeight: "100vh",
         display: "flex",
         justifyContent: "left",
         // alignItems: "center",
@@ -104,7 +106,14 @@ const ServicesSection = () => {
         boxShadow: "inset 0em 6em 12em 0em rgb(0, 0, 0)",
     };
     return (
-        <Grid container style={heroStyle} textAlign="left" p={10}>
+        <Grid
+            container
+            style={heroStyle}
+            textAlign="left"
+            p={10}
+            pr={0.5}
+            pb={5}
+        >
             <Grid item>
                 <Stack spacing={1}>
                     <Typography variant="h1">OUR SERVICES</Typography>
@@ -182,10 +191,16 @@ const ServicesSection = () => {
                         background="rgba(56, 59, 66, 0.90)"
                     />
                 </Grid>
+                <Grid item ml={8}>
+                    <Bar count={24} filled={13} />
+                </Grid>
             </Grid>
             <Grid item xs={12}>
-                <Box textAlign="right" pt={2}>
-                    <Button endIcon={<BsChevronRight />}>
+                <Box textAlign="right" pt={4} pr={9}>
+                    <Button
+                        sx={{ fontSize: "16px" }}
+                        endIcon={<BsChevronRight />}
+                    >
                         VIEW ALL SERVICES
                     </Button>
                 </Box>

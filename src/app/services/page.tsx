@@ -1,3 +1,4 @@
+import { Bar } from "@/components";
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -19,7 +20,7 @@ const services = [
     "+ PROM NIGHT LIMOUSINE SERVICE",
     "+ QUINCERANERA LIMOUSINE SERVICE",
     "+ NIGHTCLUB LIMO SERVICE",
-    "+ SCHOOL EVEN LIMO SERVICES",
+    "+ SCHOOL EVENT LIMO SERVICES",
 ];
 
 const servicesDetailed = [
@@ -74,8 +75,12 @@ const ServiceDetailPage = (props: serviceDetailProps) => {
     if (index % 2 === 0) {
         return (
             <Grid item container sx={{ backgroundColor: "#2189B7" }} my={10}>
-                <Grid item md={1}>
-                    bar
+                <Grid item md={0.5} pl={3.5} sx={{ my: "auto" }}>
+                    <Bar
+                        count={servicesDetailed.length}
+                        filled={index}
+                        color="#ffffff"
+                    />
                 </Grid>
                 <Grid item md={4} my={-6}>
                     <Image
@@ -85,7 +90,7 @@ const ServiceDetailPage = (props: serviceDetailProps) => {
                         height="700"
                     />
                 </Grid>
-                <Grid item md={7} p={6}>
+                <Grid item md={7.5} p={6}>
                     <Box
                         display="flex"
                         flexDirection="row"
@@ -105,7 +110,7 @@ const ServiceDetailPage = (props: serviceDetailProps) => {
     } else {
         return (
             <Grid item container sx={{ backgroundColor: "#A72211" }} my={10}>
-                <Grid item md={7} p={6}>
+                <Grid item md={7.5} p={6}>
                     <Box
                         display="flex"
                         flexDirection="row"
@@ -127,8 +132,12 @@ const ServiceDetailPage = (props: serviceDetailProps) => {
                         height="700"
                     />
                 </Grid>
-                <Grid item md={1}>
-                    bar
+                <Grid item md={0.5} pl={1} sx={{ m: "auto" }}>
+                    <Bar
+                        count={servicesDetailed.length}
+                        filled={index}
+                        color="#ffffff"
+                    />
                 </Grid>
             </Grid>
         );
@@ -161,7 +170,7 @@ const Section8 = () => {
                     })}
                 </Stack>
             </Grid>
-            \
+
             {servicesDetailed.map((service, index) => {
                 return (
                     <ServiceDetailPage
