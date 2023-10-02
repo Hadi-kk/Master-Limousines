@@ -31,6 +31,7 @@ const themeOptions = {
         },
         info: {
             main: "#383B42",
+            alt: "#000000",
         },
         divider: "#343232",
 
