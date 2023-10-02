@@ -94,7 +94,7 @@ const HeroSection = () => {
                             Hello MasterLimo, kindly pay your dues to the
                             developer, not sure if the delay is from you or the
                             middle guy in between us, but the site is almost
-                            completed, and I did that on pure trust and no $$ i
+                            completed, and I did that on pure trust and no $$ I
                             think its fair that I demand my peice now. I dont
                             like this approach as I value our clients and their
                             business but one can only do so much work for free,
