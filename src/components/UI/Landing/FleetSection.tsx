@@ -1,14 +1,10 @@
 "use client";
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import banner1 from "@/assets/svgs/banner1.svg";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { BsChevronRight } from "react-icons/bs";
 import FleetAccordian from "@/components/FleetAccordian";
 
 const FleetSection = () => {
     const heroStyle = {
-        // backgroundImage: `url('/CadillacLowest.svg')`,
-        // backgroundImage: `url('../assets/svgs/banner1.svg')`,
         backgroundColor: "#0000000",
         height: "20vh",
         display: "flex",
@@ -21,16 +17,16 @@ const FleetSection = () => {
 
     return (
         <>
-            <Box style={heroStyle} px={5} mt={-18}>
+            <Box style={heroStyle} pl={6} pr={3} mt={-18}>
                 <Grid container sx={{ zIndex: 100 }}>
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={12} md={5.5}>
                         <Typography variant="h1">THE FLEET</Typography>
                     </Grid>
-                    <Grid item xs={12} md={7}>
+                    <Grid item xs={12} md={6.5}>
                         <Typography
                             variant="body1"
                             textAlign="right"
-                            maxWidth={800}
+                            // maxWidth={800}
                         >
                             Experience safe and reliable Luxury Ground
                             Transportation with our professional chauffeurs at
@@ -45,7 +41,7 @@ const FleetSection = () => {
                     </Grid>
                 </Grid>
             </Box>
-            <Box sx={{ height: "70vh", backgroundColor: "secondary" }}>
+            <Box sx={{ height: "75vh", backgroundColor: "secondary" }}>
                 <FleetAccordian />
             </Box>
             <Box textAlign="right" px={5} sx={{ height: "10vh" }}>

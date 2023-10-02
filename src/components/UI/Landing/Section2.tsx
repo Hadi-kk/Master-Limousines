@@ -183,7 +183,7 @@ const Section2 = () => {
                     md={11}
                 >
                     <Grid item>
-                        <Typography variant="h3" maxWidth={500}>
+                        <Typography variant="h3" fontSize={40} maxWidth={500}>
                             Don't settle for anything less than the best!
                         </Typography>
                     </Grid>

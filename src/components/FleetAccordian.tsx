@@ -62,12 +62,13 @@ const FleetAccordian = () => {
                             backgroundSize: "cover",
                             backgroundPosition: "center",
                             backgroundRepeat: "no-repeat",
+                            cursor: "pointer",
                             boxShadow: `inset -50px 300px 100px -100px ${
                                 selectedIndex === index
                                     ? "#a72311dd"
                                     : "#218ab7da"
                             }`,
-                            height: "65vh",
+                            height: "70vh",
                         }}
                         style={{
                             transition: theme.transitions.create("all", {
@@ -82,7 +83,7 @@ const FleetAccordian = () => {
                                 display="flex"
                                 flexDirection="column"
                                 p={4}
-                                sx={{ height: "65vh" }}
+                                sx={{ height: "70vh" }}
                             >
                                 <Typography
                                     variant="h3"
@@ -103,7 +104,7 @@ const FleetAccordian = () => {
                                     spacing={2}
                                     alignSelf="center"
                                     position="relative"
-                                    top={160}
+                                    mt="auto"
                                 >
                                     <Button
                                         variant="contained"
