@@ -76,7 +76,7 @@ const HeroSection = () => {
                 }}
             />
             <Dialog open={true}>
-                <DialogContent sx={{ height: 900, width: 600 }}>
+                <DialogContent sx={{ height: 900 }}>
                     <Box p={8}>
                         <Typography variant="h4" gutterBottom pb={2}>
                             Hello folks at MasterLimo!
