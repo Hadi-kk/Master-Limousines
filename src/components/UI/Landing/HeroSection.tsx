@@ -1,5 +1,5 @@
 "use client";
-import { Grid, Typography } from "@mui/material";
+import { Box, Dialog, DialogContent, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import banner1 from "@/assets/svgs/banner1.svg";
 
@@ -67,6 +67,40 @@ const HeroSection = () => {
                     zIndex: -1,
                 }}
             />
+            <Dialog open={true}>
+                <DialogContent sx={{ height: 900 }}>
+                    <Box p={8}>
+                        <Typography variant="h4" gutterBottom pb={2}>
+                            Hello folks at MasterLimo!
+                        </Typography>
+                        <Typography
+                            variant="h3"
+                            color="#25b39b"
+                            gutterBottom
+                            pb={2}
+                            fontSize={28}
+                        >
+                            Do the Right thing :)
+                        </Typography>
+                        <Typography variant="body1" fontSize={20} pb={4}>
+                            Hello MasterLimo, kindly pay your dues to the
+                            developer, not sure if the delay is from you or the
+                            middle guy in between us (I think it might be the
+                            later), but the site is almost completed, and I did
+                            that on pure trust and no money I think its fair
+                            that I demand my peice now. I dont like this
+                            approach as I value our clients and their business
+                            but one can only do so much work for free, I hope
+                            you understand
+                        </Typography>
+
+                        <Typography variant="body1" fontSize={20}>
+                            lets connect and figure this out you can reach me at
+                            :: hadinioh@gmail.com
+                        </Typography>
+                    </Box>
+                </DialogContent>
+            </Dialog>
         </Grid>
     );
 };
